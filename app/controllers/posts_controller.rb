@@ -8,6 +8,10 @@ class PostsController < ApplicationController
     render json: @posts
   end
 
+  def last_post
+    @post = Post.last
+  end
+
   # GET /posts/1
   # GET /posts/1.json
   def show
